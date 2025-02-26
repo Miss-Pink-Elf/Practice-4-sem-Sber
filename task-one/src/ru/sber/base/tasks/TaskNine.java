@@ -22,7 +22,7 @@ public class TaskNine {
             System.out.println("У уравнения нет корней");
         else if (D == 0) {
             double x = (- b - Math.sqrt(D)) / (2 * a);
-            
+
             System.out.println("У уравнения один корень, x = " + x);
         }
         else {
