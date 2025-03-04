@@ -13,7 +13,6 @@ public class TaskEight {
     public void exec() {
         Random random = new Random();
         char HiddenLetter = (char) (random.nextInt(26) + 'A');
-//        char HiddenLetter = 'R';
 
         Scanner in = new Scanner(System.in);
         System.out.println("Введите букву от A до Z: ");
