@@ -10,19 +10,14 @@ public class TaskTwo {
     }
 
     public void exec() {
-        /*
-        int age;
-        age = 19;
-
-        System.out.println("Возраст: " + age);
-        */
-
         Scanner in = new Scanner(System.in);
         System.out.println("Введите два натуральных числа a и b: ");
+        
         int a = in.nextInt();
         int b = in.nextInt();
         int res = a / b;
         int rem = a % b;
+        
         if (b > 0 || a > 0) {
             System.out.println(a + " / " + b + " = " + res + " и " + rem + " в остатке");
         }
