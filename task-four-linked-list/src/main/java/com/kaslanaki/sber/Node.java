@@ -1,10 +1,10 @@
 package com.kaslanaki.sber;
 
 class Node {
-    int data;
+    Object data;
     Node next;
 
-    public Node(int data) {
+    public Node(Object data) {
         this.data = data;
         this.next = null;
     }
