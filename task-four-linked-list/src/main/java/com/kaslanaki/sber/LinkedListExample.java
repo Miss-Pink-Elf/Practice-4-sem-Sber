@@ -13,5 +13,7 @@ public class LinkedListExample {
         list.printList(); // Вывод: 10 -> 39 -> null
 
         System.out.println("Размер списка: " + list.size()); // Вывод: Размер списка: 2
+
+        System.out.println(list.get(1)); // Ищем второй в списке элемент
     }
 }
