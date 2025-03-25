@@ -9,11 +9,12 @@ class SinglyLinkedList {
         this.size = 0;
     }
 
-    public void add(int data) {
+    public void add(Object data) {
         Node newNode = new Node(data);
         if (head == null) {
             head = newNode;
-        } else {
+        }
+        else {
             Node current = head;
             while (current.next != null) {
                 current = current.next;
@@ -23,7 +24,7 @@ class SinglyLinkedList {
         size++;
     }
 
-    public void remove(int data) {
+    public void remove(Object data) {
         if (head == null) return;
         if (head.data == data) {
             head = head.next;
@@ -53,5 +54,18 @@ class SinglyLinkedList {
             current = current.next;
         }
         System.out.println("null");
+    }
+
+    public Object get(int index) {
+        Node current = head;
+        int count = 0;
+        while (current != null) {
+            if (count == index) {
+                return current.data;
+            }
+            count++;
+            current = current.next;
+        }
+        return null; // Индекс вне диапазона
     }
 }

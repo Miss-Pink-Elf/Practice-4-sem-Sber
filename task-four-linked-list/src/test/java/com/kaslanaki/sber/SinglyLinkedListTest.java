@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 class SinglyLinkedListTest {
     private SinglyLinkedList list;
 
@@ -42,7 +45,7 @@ class SinglyLinkedListTest {
         list.add(3);
         list.remove(1);
         Assertions.assertEquals(2, list.size()); // Проверяем, что размер списка равен 2
-        Assertions.assertEquals(2, list.head.data); // Проверяем, что новый голова - 2
+        Assertions.assertEquals(2, list.head.data); // Проверяем, что новая голова - 2
     }
 
     @Test
@@ -54,16 +57,35 @@ class SinglyLinkedListTest {
     }
 
     @Test
+    public void testAddOtherTypesData() {
+        list.add(1);
+        list.add("Трудно быть Богом, Стругацкие");
+        list.add(3.56768);
+
+        // Перенаправляем стандартный вывод в поток
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outputStream));
+
+        list.printList();  // Вывод списка
+
+        String expectedOutput = "1 -> Трудно быть Богом, Стругацкие -> 3.56768 -> null\n";
+        Assertions.assertEquals(expectedOutput, outputStream.toString().replaceAll("\r", ""));
+
+        // Возвращаем стандартный вывод в исходное состояние
+        System.setOut(System.out);
+    }
+
+    @Test
     public void testSizeOfEmptyList() {
         Assertions.assertEquals(0, list.size()); // Проверяем, что размер пустого списка равен 0
     }
 
     @Test
-    public void testPrintList() {
-        // Печать списка не требует проверки, но можно использовать для визуализации
-        list.add(1);
-        list.add(2);
-        list.add(3);
-        list.printList(); // Ожидаемый вывод: 1 -> 2 -> 3 -> null
+    public void testGetValueByIndex() {
+        list.add("Пикник на обочине");
+        list.add("Трудно быть Богом");
+        list.add("Понедельник начинается в субботу");
+        Assertions.assertEquals("Трудно быть Богом", list.get(1));
+        Assertions.assertEquals("Понедельник начинается в субботу", list.get(2));
     }
 }
