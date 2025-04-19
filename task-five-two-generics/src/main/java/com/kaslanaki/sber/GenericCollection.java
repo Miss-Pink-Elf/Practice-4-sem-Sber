@@ -3,7 +3,6 @@ package com.kaslanaki.sber;
 import java.util.ArrayList;
 import java.util.List;
 
-// Класс GenericCollection
 class GenericCollection<T> {
     private List<T> elements;
 

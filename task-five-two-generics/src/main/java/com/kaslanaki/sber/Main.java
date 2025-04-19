@@ -1,27 +1,26 @@
 package com.kaslanaki.sber;
 
-// Главный класс
 public class Main {
     public static void main(String[] args) {
         GenericCollection<Person> personCollection = new GenericCollection<>();
 
-        // Добавляем элементы
-        personCollection.add(new Person("Алексей", 30));
-        personCollection.add(new Person("Мария", 25));
-        personCollection.add(new Person("Иван", 40));
+        personCollection.add(new Person("Александр", 57));
+        personCollection.add(new Person("Надежда", 19));
+        personCollection.add(new Person("Андрей", 20));
 
-        // Вывод размера коллекции
+        System.out.println("Все элементы в списке:");
+        personCollection.printAll();
+        System.out.println("---------------------------");
+
         System.out.println("Размер коллекции: " + personCollection.size());
+        System.out.println("---------------------------");
 
-        // Получаем и выводим элемент по индексу
         Person person = personCollection.get(1);
-        System.out.println("Полученный элемент: " + person);
+        System.out.println("Второй элемент:\n" + person);
+        System.out.println("---------------------------");
 
-        // Удаляем элемент по индексу
         personCollection.remove(0);
-        System.out.println("После удаления элемента:");
-
-        // Выводим все элементы коллекции
+        System.out.println("После удаления первого элемента:");
         personCollection.printAll();
     }
 }
