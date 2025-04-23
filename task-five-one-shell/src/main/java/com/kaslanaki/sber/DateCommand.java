@@ -10,10 +10,4 @@ public class DateCommand implements Command {
         String currentDate = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
         System.out.println(currentDate);
     }
-
-    @Override
-    public String getDescription() {
-        return "date - выводит текущую дату";
-    }
-
 }

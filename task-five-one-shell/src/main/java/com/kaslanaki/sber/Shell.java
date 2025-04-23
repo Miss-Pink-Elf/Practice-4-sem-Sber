@@ -13,7 +13,7 @@ public class Shell {
         commands.put("time", new TimeCommand());
         commands.put("pwd", new PwdCommand());
         commands.put("exit", new ExitCommand());
-        commands.put("help", new HelpCommand(commands));
+        commands.put("help", new HelpCommand());
     }
 
     public void run() {

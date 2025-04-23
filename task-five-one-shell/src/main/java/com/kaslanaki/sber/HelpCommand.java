@@ -1,23 +1,15 @@
 package com.kaslanaki.sber;
 
-import java.util.Map;
-
 // Команда для вывода списка доступных команд
 public class HelpCommand implements Command {
-    private final Map<String, Command> commands;
-
-    public HelpCommand(Map<String, Command> commands) {
-        this.commands = commands;
-    }
-
     @Override
     public void execute() {
         System.out.println("Доступные команды:");
-        commands.forEach((name, command) -> System.out.println(" " + command.getDescription()));
+        System.out.println("time - выводит текущее время");
+        System.out.println("pwd - выводит текущий рабочий каталог");
+        System.out.println("exit - завершает работу приложения");
+        System.out.println("help - выводит список доступных команд");
+        System.out.println("date - выводит текущую дату");
     }
 
-    @Override
-    public String getDescription() {
-        return "help - выводит список доступных команд";
-    }
 }
