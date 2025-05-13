@@ -1,7 +1,8 @@
-package com.kaslanaki.sber;
+package com.kaslanaki.sber.Commands;
 
-@CommandAnno(name = "exit", description = "завершение работы приложения")
-public class ExitCommand implements Command {
+import com.kaslanaki.sber.Command;
+
+public class exit implements Command {
 
     @Override
     public String getName() {

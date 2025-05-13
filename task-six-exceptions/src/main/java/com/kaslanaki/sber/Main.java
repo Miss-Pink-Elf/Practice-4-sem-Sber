@@ -1,6 +1,5 @@
 package com.kaslanaki.sber;
 
-// Основной класс программы
 import java.util.Scanner;
 
 public class Main {

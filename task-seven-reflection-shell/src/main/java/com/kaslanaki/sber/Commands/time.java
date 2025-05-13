@@ -1,10 +1,11 @@
-package com.kaslanaki.sber;
+package com.kaslanaki.sber.Commands;
+
+import com.kaslanaki.sber.Command;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@CommandAnno(name = "time", description = "вывод теĸущего времени")
-public class TimeCommand implements Command {
+public class time implements Command {
     @Override
     public String getName() {
         return "time";

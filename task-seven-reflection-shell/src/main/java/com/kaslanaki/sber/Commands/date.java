@@ -1,10 +1,12 @@
-package com.kaslanaki.sber;
+package com.kaslanaki.sber.Commands;
+
+import com.kaslanaki.sber.Command;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@CommandAnno(name = "date", description = "вывод текущей даты")
-public class DateCommand implements Command {
+
+public class date implements Command {
 
     @Override
     public String getName() {
