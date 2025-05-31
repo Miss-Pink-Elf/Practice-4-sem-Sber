@@ -1,0 +1,42 @@
+Папка test_data содержит 200 файлов с разрешением .txt, в которых сгенерированы тексты, состоящие из слов книги
+"Трудно быть Богом" Аркадия и Бориса Стругацких. В каждом текстовом файле от 1000 до 10000 строк длиной от 5 до 25 слов.
+
+После компиляции текста программы в командную строку вводится:
+1.
+java -cp src/main/java com.kaslanaki.sber.ConcurrentWordFrequencyAnalyzerLast test_data/ 1
+вывод:
+Время работы программы (1 поток): 21645 мс
+2.
+java -cp src/main/java com.kaslanaki.sber.ConcurrentWordFrequencyAnalyzerLast test_data/ 2
+вывод:
+Время работы программы (2 потока): 10887 мс
+3.
+java -cp src/main/java com.kaslanaki.sber.ConcurrentWordFrequencyAnalyzerLast test_data/ 3
+вывод:
+Время работы программы (3 потока): 7412 мс
+4.
+java -cp src/main/java com.kaslanaki.sber.ConcurrentWordFrequencyAnalyzerLast test_data/ 4
+вывод:
+Время работы программы (4 потоков): 5571 мс
+5.
+java -cp src/main/java com.kaslanaki.sber.ConcurrentWordFrequencyAnalyzerLast test_data/ 5
+вывод:
+Время работы программы (5 потоков): 4604 мс
+...
+10.
+java -cp src/main/java com.kaslanaki.sber.ConcurrentWordFrequencyAnalyzerLast test_data/ 10
+вывод:
+Время работы программы (10 потоков): 2568 мс
+...
+15.
+java -cp src/main/java com.kaslanaki.sber.ConcurrentWordFrequencyAnalyzerLast test_data/ 15
+вывод:
+Время работы программы (15 потоков): 2125 мс
+...
+20.
+java -cp src/main/java com.kaslanaki.sber.ConcurrentWordFrequencyAnalyzerLast test_data/ 20
+вывод:
+Время работы программы (20 потоков): 2140 мс
+
+Оптимальное количество потоков для данной системы и задачи находится в диапазоне от 5 до 15
+
